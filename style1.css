@@ -80,19 +80,19 @@ body {
 }
 
 .countdown #day:before {
-    content: 'Days';
+    content: 'Ngày';
 }
 
 .countdown #hour:before {
-    content: 'Hours';
+    content: 'Giờ';
 }
 
 .countdown #minute:before {
-    content: 'Minutes';
+    content: 'Phút';
 }
 
 .countdown #second:before {
-    content: 'Seconds';
+    content: 'Giây';
 }
 
 video {
