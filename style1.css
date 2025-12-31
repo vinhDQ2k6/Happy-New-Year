@@ -222,7 +222,6 @@ video {
 /* Very small screens - stack countdown boxes */
 @media screen and (max-width: 360px) {
     .countdown {
-        flex-wrap: wrap;
         gap: 15px;
     }
     
