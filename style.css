@@ -94,3 +94,62 @@ body {
 		  width: 100%;
 		  height: 100%;
 		}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .countdown-btn {
+    padding: 12px 25px;
+  }
+  
+  .countdown-btn a {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  .credits {
+    bottom: 15px;
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-btn {
+    padding: 10px 20px;
+  }
+  
+  .countdown-btn a {
+    font-size: 12px;
+  }
+  
+  .credits {
+    bottom: 10px;
+  }
+}
+
+/* Force landscape orientation hint for very small portrait screens */
+@media screen and (max-width: 480px) and (orientation: portrait) and (max-height: 700px) {
+  body::before {
+    content: '📱 Xoay ngang màn hình để xem tốt hơn';
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    z-index: 1000;
+    white-space: nowrap;
+    animation: fadeInOut 5s ease-in-out forwards;
+  }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
