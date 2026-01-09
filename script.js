@@ -135,6 +135,18 @@ function init() {
       },
       onComplete: function() {
         document.querySelector(".gift").classList.add("hidden");
+        // Show the countdown button after 3 seconds
+        setTimeout(function() {
+          var creditsBtn = document.getElementById("credits-btn");
+          if (creditsBtn) {
+            creditsBtn.style.display = "block";
+            creditsBtn.style.opacity = "0";
+            TweenMax.to(creditsBtn, 1, {
+              opacity: 1,
+              ease: Power2.easeOut
+            });
+          }
+        }, 3000);
       }
     });
   }
